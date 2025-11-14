@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Seafood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="pageTitle">Semua Menu</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="#" onclick="openCart()">Keranjang (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="productList" class="product-grid"></div>
+  </main>
+
+  <!-- 🔹 Modal Keranjang -->
+  <div id="cartModal" class="cart-modal hidden">
+    <div class="cart-box">
+      <h2>Keranjang Belanja</h2>
+      <div id="cartItems"></div>
+      <p><strong>Subtotal:</strong> <span id="subtotal">Rp0</span></p>
+
+      <div class="checkout-info">
+        <input type="text" id="custName" placeholder="Nama Lengkap">
+        <textarea id="custAddress" placeholder="Alamat Pengiriman"></textarea>
+        <textarea id="custNotes" placeholder="Catatan tambahan (opsional)"></textarea>
+      </div>
+
+      <div style="margin-top: 15px; text-align:right;">
+        <button onclick="checkoutWA()" class="btn-primary">Checkout via WA</button>
+        <button onclick="closeCart()" style="background:#ef4444;color:white;padding:8px 12px;border-radius:8px;">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
