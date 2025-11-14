@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seafood Market Online</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- 🔹 Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🦞 Seafood Market</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+            </nav>
+            <div class="nav-right">
+                <a href="#" onclick="openCart()" class="cart-link">🛒 <span id="cartCount">0</span></a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="wa-btn">Chat WA</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 🔹 Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Seafood Segar & Siap Santap</h1>
+            <p>Dari laut ke meja makanmu — pesan seafood segar dan matang favoritmu sekarang juga!</p>
+            <a href="menu.html" class="btn-primary">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- 🔹 Kategori -->
+    <section class="categories">
+        <h2>Kategori Menu</h2>
+        <div class="category-grid">
+            <div class="cat-card">
+                <img src="https://raw.githubusercontent.com/starsandwich01-droid/image/refs/heads/main/Gemini_Generated_Image_ekgzk1ekgzk1ekgz.png"
+                    alt="Seafood Mentah">
+                <h3>Seafood Mentah</h3>
+                <p>Pilih ikan, udang, dan cumi segar langsung dari laut.</p>
+                <a href="menu.html?cat=mentah" class="btn-small">Lihat Menu</a>
+            </div>
+            <div class="cat-card">
+                <img src="https://raw.githubusercontent.com/starsandwich01-droid/image/refs/heads/main/Gemini_Generated_Image_yrje7nyrje7nyrje.png"
+                    alt="Seafood Matang">
+                <h3>Seafood Matang</h3>
+                <p>Siap santap! Kepiting, udang, cumi, dengan aneka saus pilihan.</p>
+                <a href="menu.html?cat=matang" class="btn-small">Lihat Menu</a>
+            </div>
+            <div class="cat-card">
+                <img src="https://raw.githubusercontent.com/starsandwich01-droid/image/refs/heads/main/Gemini_Generated_Image_rpx70urpx70urpx7.png"
+                    alt="Lauk & Pendamping">
+                <h3>Lauk & Pendamping</h3>
+                <p>Nasi, sambal, sayur, dan pelengkap favorit untuk hidanganmu.</p>
+                <a href="menu.html?cat=lauk" class="btn-small">Lihat Menu</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 🔹 Footer -->
+    <footer class="footer">
+        <p>© 2025 Seafood Market Online. Semua hak dilindungi.</p>
+        <p>
+            <a href="https://instagram.com" target="_blank">Instagram</a> |
+            <a href="https://tiktok.com" target="_blank">TikTok</a> |
+            <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+        </p>
+    </footer>
+    <!-- 🔹 Modal Keranjang -->
+<div id="cartModal" class="cart-modal hidden">
+    <div class="cart-box">
+      <h2>Keranjang Belanja</h2>
+      <div id="cartItems"></div>
+      <p><strong>Subtotal:</strong> <span id="subtotal">Rp0</span></p>
+
+      <div class="checkout-info">
+        <input type="text" id="custName" placeholder="Nama Lengkap">
+        <textarea id="custAddress" placeholder="Alamat Pengiriman"></textarea>
+        <textarea id="custNotes" placeholder="Catatan tambahan (opsional)"></textarea>
+      </div>
+
+      <div style="margin-top: 15px; text-align:right;">
+        <button onclick="checkoutWA()" class="btn-primary">Checkout via WA</button>
+        <button onclick="closeCart()" style="background:#ef4444;color:white;padding:8px 12px;border-radius:8px;">Tutup</button>
+      </div>
+    </div>
+</div>
+<span id="cartCount">0</span>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
